@@ -1,0 +1,13 @@
+[
+  {
+    "enabled": true,
+    "campaignId": "taskpar_2026_01",
+    "assetKey": "task_par",
+    "title": "تسک‌پر",
+    "description": "مدیریت ساده کارهای روزانه",
+    "actionLabel": "دانلود",
+    "link": "https://cafebazaar.ir/app/your.package.name",
+    "height": 94,
+    "priority": 10
+  }
+]
