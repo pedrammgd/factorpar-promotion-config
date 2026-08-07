@@ -10,16 +10,5 @@
     "assetKey": "task_par",
     "height": 94,
     "priority": 20
-  },
-  {
-    "enabled": true,
-    "campaignId": "another_app_2026_01",
-    "title": "نام اپ دوم",
-    "description": "توضیح کوتاه و جذاب",
-    "actionLabel": "مشاهده",
-    "link": "https://cafebazaar.ir/app/PACKAGE_NAME_2",
-    "imageUrl": "https://config.parfactor.ir/images/app-2.png",
-    "height": 94,
-    "priority": 10
   }
 ]
