@@ -1,0 +1,28 @@
+{
+  "plans": [
+    {
+      "sku": "bronze_buy",
+      "enabled": true,
+      "title": "اشتراک برنزی",
+      "description": "۲۹ فاکتور دائمی و مشتریان نامحدود",
+      "amountRials": 890000,
+      "price": "۸۹٬۰۰۰ تومان"
+    },
+    {
+      "sku": "silver",
+      "enabled": true,
+      "title": "اشتراک نقره‌ای",
+      "description": "۵۹ فاکتور دائمی، مشتریان نامحدود و حذف نام فاکتورپر",
+      "amountRials": 1090000,
+      "price": "۱۰۹٬۰۰۰ تومان"
+    },
+    {
+      "sku": "gold",
+      "enabled": true,
+      "title": "اشتراک طلایی",
+      "description": "فاکتور نامحدود، انبار و حذف تبلیغات و نام فاکتورپر",
+      "amountRials": 1190000,
+      "price": "۱۱۹٬۰۰۰ تومان"
+    }
+  ]
+}
