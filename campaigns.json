@@ -5,20 +5,9 @@
     "title": "تسک‌پر",
     "description": "مدیریت ساده کارهای روزانه",
     "actionLabel": "دانلود",
-    "link": "http://google.com/",
+    "link": "",
     "imageUrl": "https://config.parfactor.ir/images/com.example.task_par_6bec091d-52fe-4ecb-b53e-ed5d36a4d62f.webp",
     
-    "height": 94,
-    "priority": 20
-  },{
-    "enabled": true,
-    "campaignId": "taskpar_2026_02",
-    "title": "نوت پر",
-    "description": "مدیریت ساده کارهای روزانه",
-    "actionLabel": "برو",
-    "link": "http://google.com/",
-    "imageUrl": "https://config.parfactor.ir/images/com.example.task_par_6bec091d-52fe-4ecb-b53e-ed5d36a4d62f.webp",
-
     "height": 94,
     "priority": 20
   }
