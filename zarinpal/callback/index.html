@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>بازگشت به فاکتورپر</title>
+    <style>
+      body { margin: 0; background: #f5f8fc; color: #17202a; font-family: -apple-system, BlinkMacSystemFont, "IRANSans", sans-serif; }
+      main { max-width: 390px; margin: 18vh auto; padding: 24px; text-align: center; }
+      h1 { font-size: 22px; }
+      p { color: #58636e; line-height: 1.9; }
+      a { display: inline-block; margin-top: 12px; padding: 14px 22px; border-radius: 12px; background: #00ad69; color: #fff; font-weight: 700; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>بازگشت به فاکتورپر</h1>
+      <p id="message">در حال بازگشت به برنامه…</p>
+      <a id="open-app" href="#">بازگشت به فاکتورپر</a>
+    </main>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const authority = params.get('Authority');
+        const status = params.get('Status');
+        const message = document.getElementById('message');
+        const button = document.getElementById('open-app');
+
+        if (!authority || !status) {
+          button.hidden = true;
+          message.textContent = 'اطلاعات بازگشت پرداخت معتبر نیست. لطفاً به برنامه برگردید.';
+          return;
+        }
+
+        const query = new URLSearchParams({ Authority: authority, Status: status });
+        const appLink = `factorpar://zarinpal/callback?${query.toString()}`;
+        button.href = appLink;
+
+        // Android uses an explicit intent; iOS and browsers that block an
+        // automatic handoff still have the visible fallback button.
+        if (/Android/i.test(navigator.userAgent)) {
+          window.location.replace(`intent://zarinpal/callback?${query.toString()}#Intent;scheme=factorpar;package=com.example.factor_flutter_mobile;end`);
+        } else {
+          window.location.replace(appLink);
+        }
+      })();
+    </script>
+  </body>
+</html>
