@@ -15,7 +15,7 @@
   <body>
     <main>
       <h1>بازگشت به فاکتورپر</h1>
-      <p id="message">در حال بازگشت به برنامه…</p>
+      <p id="message">تا ۳ ثانیه دیگر به برنامه بازمی‌گردید…</p>
       <a id="open-app" href="#">بازگشت به فاکتورپر</a>
     </main>
     <script>
@@ -25,6 +25,7 @@
         const status = params.get('Status');
         const message = document.getElementById('message');
         const button = document.getElementById('open-app');
+        let seconds = 3;
 
         if (!authority || !status) {
           button.hidden = true;
@@ -36,13 +37,29 @@
         const appLink = `factorpar://zarinpal/callback?${query.toString()}`;
         button.href = appLink;
 
-        // Android uses an explicit intent; iOS and browsers that block an
-        // automatic handoff still have the visible fallback button.
-        if (/Android/i.test(navigator.userAgent)) {
-          window.location.replace(`intent://zarinpal/callback?${query.toString()}#Intent;scheme=factorpar;package=com.example.factor_flutter_mobile;end`);
-        } else {
-          window.location.replace(appLink);
-        }
+        const openApp = () => {
+          if (/Android/i.test(navigator.userAgent)) {
+            window.location.href = `intent://zarinpal/callback?${query.toString()}#Intent;scheme=factorpar;package=com.example.factor_flutter_mobile;end`;
+          } else {
+            window.location.href = appLink;
+          }
+        };
+
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          openApp();
+        });
+
+        const countdown = window.setInterval(() => {
+          seconds -= 1;
+          if (seconds <= 0) {
+            window.clearInterval(countdown);
+            message.textContent = 'در حال بازگشت به برنامه…';
+            openApp();
+            return;
+          }
+          message.textContent = `تا ${seconds} ثانیه دیگر به برنامه بازمی‌گردید…`;
+        }, 1000);
       })();
     </script>
   </body>
