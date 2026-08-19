@@ -5,24 +5,24 @@
       "enabled": true,
       "title": "اشتراک برنزی",
       "description": "۲۹ فاکتور دائمی و مشتریان نامحدود",
-      "amountRials": 1090000,
-      "price": "۱۰۹٬۰۰۰ تومان"
+      "amountRials": 1990000,
+      "price": "۱۹۹٬۰۰۰ تومان"
     },
     {
       "sku": "silver",
       "enabled": true,
       "title": "اشتراک نقره‌ای",
       "description": "۵۹ فاکتور دائمی، مشتریان نامحدود و حذف نام فاکتورپر",
-      "amountRials": 1990000,
-      "price": "۱۹۹٬۰۰۰ تومان"
+      "amountRials": 2990000,
+      "price": "۲۹۹٬۰۰۰ تومان"
     },
     {
       "sku": "gold",
       "enabled": true,
       "title": "اشتراک طلایی",
       "description": "فاکتور نامحدود، انبار و حذف تبلیغات و نام فاکتورپر",
-      "amountRials": 2990000,
-      "price": "۲۹۹٬۰۰۰ تومان"
+      "amountRials": 3990000,
+      "price": "۳۹۹٬۰۰۰ تومان"
     }
   ]
 }
