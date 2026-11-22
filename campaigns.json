@@ -11,7 +11,7 @@
     "priority": 20
   },
   {
-    "enabled": true,
+    "enabled": false,
     "campaignId": "taskpar_2026_01",
     "title": "تسک‌ پر",
     "description": "مدیریت ساده کارهای روزانه",
